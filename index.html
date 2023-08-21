@@ -28,7 +28,8 @@
             <div class="hero-content my-32 lg:my-0 flex-col lg:flex-row">
                 <div class="w-1/2 text-center">
                     <p class="lg:text-3xl mb-6 font-medium">---SALE FEVER---</p>
-                    <h1 class="text-5xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
+                    <h1 class="text-2xl md:text-3xl lgtext-5xl font-bold">Purchase TK 200 or <br> above & get <span
+                            class="text-[#E527B2]">20%
                             off</span></h1>
                     <p class="mt-6">Use Promo Code
                         <button class="btn btn-primary bg-[#E527B2] text-2xl text-white px-6  border-0">SELL200</button>
@@ -243,16 +244,17 @@
                     <h2 class="text-2xl font-medium ">
                         Have coupon?
                     </h2>
-                    <p class="flex mt-4 ">
+                    <p class="w-full flex mt-4 ">
                         <input type="text" placeholder="Coupon code"
                             class="text-[20px] border border-gray-300 px-4 py-2 rounded-tl-lg rounded-bl-lg "
                             id="inputField">
                         <button onclick="couponCode(this)" id="applyBtn"
-                            class=" bg-[#E527B2] text-white text-[20px] ml-[-10px] rounded-tr-lg rounded-br-lg px-4 py-2">Apply</button>
+                            class=" bg-[#E527B2] text-white text-[20px]  rounded-tr-lg rounded-br-lg px-4 py-2 cursor-not-allowed opacity-50"
+                            >Apply</button>
                     </p>
                 </div>
                 <div class="bg-base-100 shadow-xl p-8 rounded mt-10">
-                    <div class="selected-items py-6 border-b border-gray-300 text-2xl font-medium" id="selected-items">
+                    <div class="selected-items py-6 border-b border-gray-300 text-2xl font-medium " id="selected-items">
 
                     </div>
 
@@ -269,16 +271,20 @@
                     <!-- <button class="w-full bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4">Make
                         Purchase</button> -->
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="w-full bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4" onclick="my_modal_1.showModal()">Make
+                    <button id="purchaseBtn" disabled
+                        class="w-full bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4 cursor-not-allowed opacity-50"
+                         onclick="my_modal_1.showModal()">Make
                         Purchase</button>
                     <dialog id="my_modal_1" class="modal">
                         <form method="dialog" class="modal-box ">
                             <img class="mx-auto" src="./images/congo.png" alt="">
-                            <h3 class="font-bold text-lg text-center">Congratulations</h3>
-                            <p class="py-4 text-center">Your Purchase the product</p>
+                            <h3 class="font-bold text-5xl mt-10 text-center">Congratulations</h3>
+                            <p class="py-4 text-center text-lg">You Purchase the product</p>
                             <div class="modal-action justify-center">
                                 <!-- if there is a button in form, it will close the modal -->
-                                <button id="reloadButton" class="w-1/2 bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4">Go Home</button>
+                                <button id="reloadButton"
+                                    class="w-1/2 mb-10 bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4">Go
+                                    Home</button>
                             </div>
                         </form>
                     </dialog>
@@ -289,15 +295,11 @@
 
     </main>
     <script>
-        // Get a reference to the button element
         const reloadButton = document.getElementById('reloadButton');
-      
-        // Add a click event listener to the button
-        reloadButton.addEventListener('click', function() {
-          // Reload the page
-          location.reload();
+        reloadButton.addEventListener('click', function () {
+            location.reload();
         });
-      </script>
+    </script>
     <script src="./scripts.js"></script>
 
 </body>
