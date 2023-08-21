@@ -26,14 +26,15 @@
     <header class=" mx-auto">
         <div class="hero bg-[#F9F6E2]">
             <div class="hero-content my-32 lg:my-0 flex-col lg:flex-row">
-                <div class="text-center">
+                <div class="w-1/2 text-center">
                     <p class="lg:text-3xl mb-6 font-medium">---SALE FEVER---</p>
-                    <h1 class="text-5xl font-bold">Purchase TK 200 or <br> above & get 20% off</h1>
+                    <h1 class="text-5xl font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
+                            off</span></h1>
                     <p class="mt-6">Use Promo Code
                         <button class="btn btn-primary bg-[#E527B2] text-2xl text-white px-6  border-0">SELL200</button>
                     </p>
                 </div>
-                <img src="./images/Summer 1.png" class="max-w-[1/2] rounded-lg" />
+                <img src="./images/Summer 1.png" class="w-1/2 rounded-lg" />
 
             </div>
         </div>
@@ -45,47 +46,50 @@
                 <!--Kitchenware  -->
                 <h2 class="  text-4xl font-semibold text-[#111]">Kitchenware</h2>
                 <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div onclick="addToEntry(this);" id="prod1" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod1.png" alt="K. Accessories" class="" />
                             </div>
                         </div>
                         <div class="card-body items-center text-center">
                             <div class="rating">
                                 <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
-                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">K. Accessories</h2>
-                            <p>39.00 TK</p>
+                            <p><span id="productOnePrice">39.00</span> TK</p>
                         </div>
                     </div>
-                    
-                    
-                    <div class="card bg-base-100 shadow-xl ">
-                        <div class="flex justify-center">
-                            <div class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+
+
+                    <div onclick="addToEntry(this);" class="card bg-base-100 shadow-xl ">
+                        <div id="prod2" class="flex justify-center">
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod2.png" alt="K. Accessories" class="" />
                             </div>
                         </div>
                         <div class="card-body items-center text-center">
                             <div class="rating">
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="card-title">K. Accessories</h2>
-                            <p>25.00 TK</p>
+                            <h2 class="card-title">Accessories</h2>
+                            <p><span id="productTwoPrice">25.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div onclick="addToEntry(this);" id="prod3" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod3.png" alt="K. Accessories" class="" />
                             </div>
                         </div>
@@ -98,36 +102,38 @@
                                 <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Home Cooker</h2>
-                            <p>49.00 TK</p>
+                            <p><span id="productThreePrice">49.00</span> TK</p>
                         </div>
                     </div>
                 </div>
                 <!-- Sportswear -->
                 <h2 class="mt-14  text-4xl font-semibold text-[#111]">Sportswear</h2>
                 <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div onclick="addToEntry(this);" id="prod4" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod4.png" alt="Sports Back Cap" class="w-full h-auto" />
                             </div>
                         </div>
                         <div class="card-body items-center text-center">
                             <div class="rating">
                                 <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" checked />
-                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Sports Back Cap</h2>
-                            <p>49.00 TK</p>
+                            <p><span id="productFourPrice">49.00</span> TK</p>
                         </div>
                     </div>
-                    
-                    
-                    <div class="card bg-base-100 shadow-xl ">
+
+
+                    <div onclick="addToEntry(this);" id="prod5" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class=" rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                            <div
+                                class=" rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod5.png" alt="Full Jersey Set" class="" />
                             </div>
                         </div>
@@ -140,54 +146,59 @@
                                 <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Full Jersey Set</h2>
-                            <p>69.00 TK</p>
+                            <p><span id="productFivePrice">69.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div onclick="addToEntry(this);" id="prod6" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class=" rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
-                                <img src="./images/prod6.png" alt="Sports cates" class="" />
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                                <img src="./images/prod7.png" alt="Sports cates
+                                " class="" />
                             </div>
                         </div>
                         <div class="card-body items-center text-center">
                             <div class="rating">
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="card-title">Sports cates</h2>
-                            <p>159.00 TK</p>
+                            <h2 class="card-title">Sports cates
+                            </h2>
+                            <p><span id="productSIXPrice">159.00</span> TK</p>
                         </div>
                     </div>
                 </div>
                 <!-- Furniture -->
                 <h2 class="mt-14  text-4xl font-semibold text-[#111]">Furniture</h2>
                 <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div onclick="addToEntry(this);" id="prod7" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod7.png" alt="Single Relax Chair" class="" />
                             </div>
                         </div>
                         <div class="card-body items-center text-center">
                             <div class="rating">
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" checked />
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Single Relax Chair</h2>
-                            <p>185.00 TK</p>
+                            <p><span id="productSevenPrice">185.00</span> TK</p>
                         </div>
                     </div>
-                    
-                    
-                    <div class="card bg-base-100 shadow-xl ">
+
+
+                    <div onclick="addToEntry(this);" id="prod8" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod8.png" alt="Children play" class=" " />
                             </div>
                         </div>
@@ -200,45 +211,93 @@
                                 <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <h2 class="card-title">Children play</h2>
-                            <p>299.00 TK</p>
+                            <p><span id="productEightPrice">299.00</span> TK</p>
                         </div>
                     </div>
-                    <div class="card bg-base-100 shadow-xl ">
+                    <div onclick="addToEntry(this);" id="prod9" class="card bg-base-100 shadow-xl ">
                         <div class="flex justify-center">
-                            <div class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
+                            <div
+                                class="rounded-xl bg-[#1111110d] px-8 py-2 md:px-8 md:py-4 lg:px-16 lg:py-8 mt-4 mr-4 ml-4">
                                 <img src="./images/prod9.png" alt="Flexible Sofa" class="" />
                             </div>
                         </div>
                         <div class="card-body items-center text-center">
                             <div class="rating">
                                 <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" checked />
-                                <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
                             </div>
+
                             <h2 class="card-title">Flexible Sofa</h2>
-                            <p>339.00 TK</p>
+                            <p><span id="productNinePrice">339.00</span> TK</p>
+
                         </div>
                     </div>
                 </div>
 
             </section>
-            <section class="mt-14">
-                <div>
+            <section class="mt-14 ">
+                <div class="bg-base-100 shadow-xl p-8 rounded">
                     <h2 class="text-2xl font-medium ">
                         Have coupon?
                     </h2>
-                    <p class="flex mt-4">
-                        <input type="text" placeholder="Coupon code" class="text-[20px] border border-gray-300 px-4 py-2 rounded-tl-lg rounded-bl-lg ">
-                        <button class=" bg-[#E527B2] text-white ml-[-10px] rounded-tr-lg rounded-br-lg px-4 py-2">Apply</button>
+                    <p class="flex mt-4 ">
+                        <input type="text" placeholder="Coupon code"
+                            class="text-[20px] border border-gray-300 px-4 py-2 rounded-tl-lg rounded-bl-lg "
+                            id="inputField">
+                        <button onclick="couponCode(this)" id="applyBtn"
+                            class=" bg-[#E527B2] text-white text-[20px] ml-[-10px] rounded-tr-lg rounded-br-lg px-4 py-2">Apply</button>
                     </p>
+                </div>
+                <div class="bg-base-100 shadow-xl p-8 rounded mt-10">
+                    <div class="selected-items py-6 border-b border-gray-300 text-2xl font-medium" id="selected-items">
+
+                    </div>
+
+                    <div class="py-6 border-b border-gray-300 ">
+                        <h6 class="text-2xl font-medium">Total price : <span class="text-[#11111180]"
+                                id="totalPrice">00</span> <span class="text-[#11111180]">TK</span></h6>
+                        <h6 class="text-2xl font-medium">Discount : <span class="text-[#11111180]" id="discount">00
+                            </span> <span class="text-[#11111180]">TK</span> </h6>
+                        <h6 class="text-2xl font-medium">Total : <span class="text-[#11111180]" id="total">00</span>
+                            <span class="text-[#11111180]">TK</span>
+                        </h6>
+                    </div>
+
+                    <!-- <button class="w-full bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4">Make
+                        Purchase</button> -->
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="w-full bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4" onclick="my_modal_1.showModal()">Make
+                        Purchase</button>
+                    <dialog id="my_modal_1" class="modal">
+                        <form method="dialog" class="modal-box ">
+                            <img class="mx-auto" src="./images/congo.png" alt="">
+                            <h3 class="font-bold text-lg text-center">Congratulations</h3>
+                            <p class="py-4 text-center">Your Purchase the product</p>
+                            <div class="modal-action justify-center">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button id="reloadButton" class="w-1/2 bg-[#E527B2] text-white mt-4 ml-[-10px] text-[20px] rounded-lg py-4">Go Home</button>
+                            </div>
+                        </form>
+                    </dialog>
                 </div>
 
             </section>
         </div>
 
     </main>
+    <script>
+        // Get a reference to the button element
+        const reloadButton = document.getElementById('reloadButton');
+      
+        // Add a click event listener to the button
+        reloadButton.addEventListener('click', function() {
+          // Reload the page
+          location.reload();
+        });
+      </script>
     <script src="./scripts.js"></script>
 
 </body>
